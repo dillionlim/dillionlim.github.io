@@ -11,7 +11,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Pull latest changes from main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
       
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
