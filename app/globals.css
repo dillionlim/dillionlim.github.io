@@ -192,3 +192,11 @@ pre:not([class]) code {
 html {
   scroll-behavior: smooth;
 }
+
+ul {
+  @apply list-disc pl-5;
+}
+
+li {
+  @apply mb-2; /* Optional: Adds spacing between list items */
+}
