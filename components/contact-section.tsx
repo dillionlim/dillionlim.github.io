@@ -11,18 +11,18 @@ export default function ContactSection() {
           <p className="text-lg text-gray-600 mb-6">
             Feel free to reach out via email or connect with me on LinkedIn and GitHub!
           </p>
-          <div className="space-y-4">
+          <div className="space-y-4 md:pl-6">
             <a
               href="mailto:dillionlim2004@gmail.com"
-              className="flex items-center justify-center text-lg text-blue-600 hover:text-blue-800"
+              className="flex items-center w-full text-lg text-blue-600 hover:text-blue-800 text-left"
             >
-              <FaEnvelope className="mr-3" /> Email (dillionlim2004@gmail.com)
+              <FaEnvelope className="mr-3" /> dillionlim2004@gmail.com
             </a>
             <a
               href="https://linkedin.com/in/dillion-lim"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center text-lg text-blue-600 hover:text-blue-800"
+              className="flex items-center w-full text-lg text-blue-600 hover:text-blue-800 text-left"
             >
               <FaLinkedin className="mr-3" /> LinkedIn
             </a>
@@ -30,7 +30,7 @@ export default function ContactSection() {
               href="https://github.com/dillionlim"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center text-lg text-blue-600 hover:text-blue-800"
+              className="flex items-center w-full text-lg text-blue-600 hover:text-blue-800 text-left"
             >
               <FaGithub className="mr-3" /> GitHub
             </a>

@@ -28,7 +28,7 @@ export default function IntroSection () {
                 <div className="text-xl md:text-2xl">
                 <TypewriterEffect words={interests} />
                 </div>
-                <div className="flex gap-6 mt-6 py-6">
+                <div className="flex gap-x-6 mt-6 pt-6 md:py-6">
                     <a
                         href="mailto:dillionlim2004@gmail.com"
                         target="_blank"
@@ -58,8 +58,8 @@ export default function IntroSection () {
                     </a>
                 </div>
             </div>
-            <div className="relative w-40 h-40 md:w-96 md:h-96">
-                <div className="absolute inset-0 rounded-2xl overflow-hidden backdrop-blur-sm">
+            <div className="relative w-64 h-56 md:w-96 md:h-96 -mb-8">
+                <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <div className="w-full h-full bg-[url('/images/photo.png')] bg-cover bg-center" />
                 </div>
             </div>
