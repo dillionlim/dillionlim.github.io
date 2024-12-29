@@ -18,8 +18,7 @@ jobs:
       
       - name: Pull latest changes from main
         run: |
-          git fetch origin main
-          git reset --hard origin/main
+          git pull
       
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
