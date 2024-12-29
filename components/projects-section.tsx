@@ -146,7 +146,7 @@ export default function ProjectsSection() {
               <div className="mt-4 relative">
                 <Carousel>
                   <CarouselContent>
-                    {projects[selectedProject].carouselImages.map((image, index) => (
+                    {projects[selectedProject]?.carouselImages?.map((image, index) => (
                       <CarouselItem key={index}>
                         <div className="flex justify-center">
                           <div className="relative">
