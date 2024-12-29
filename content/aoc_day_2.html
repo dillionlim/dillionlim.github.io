@@ -1309,73 +1309,138 @@ $(document).ready(function() {
     });
 });</script>
 <script type="text/javascript">hljs.highlightAll();</script>
-<div id="day-1-historian-hysteria" class="section level1">
-<h1>Day 1: Historian Hysteria</h1>
+<div id="day-2-red-nosed-reports" class="section level1">
+<h1>Day 2: Red-Nosed Reports</h1>
 <div id="input-bounds" class="section level2">
 <h2>Input Bounds</h2>
-<p>Based on preliminary data analysis, all the input can be fit into an
-unsigned 32-bit integer. In fact, all numbers seem to be unsigned
-5-digit numbers.</p>
+<p>From preliminary data analysis, we know that the numbers are all
+unsigned 32-bit integers.</p>
+<p>We also know that each row must have at least 2 integers, but we will
+not use that fact here (we will still handle it).</p>
 </div>
 <div id="part-a" class="section level2">
 <h2>Part A</h2>
 <div id="abridged-problem-statement" class="section level3">
 <h3>Abridged Problem Statement</h3>
-<p>You are given an input of <span class="math inline">\(n\)</span>
-rows. Each row has 2 numbers, <span class="math inline">\(a\)</span> and
-<span class="math inline">\(b\)</span>. For each column, sort the
-numbers, and find the sum of the absolute difference between the numbers
-in each row once sorted.</p>
+<p>You have <span class="math inline">\(Q\)</span> queries.</p>
+<p>Each query consists of a list of <span class="math inline">\(N\)</span> numbers. Each query is <em>safe</em> if
+it is either strictly decreasing or strictly increasing, and adjacent
+numbers differ by a value between 1 and 3 (inclusive).</p>
+<p>Count the number of <em>safe</em> queries.</p>
 </div>
 <div id="solution" class="section level3">
 <h3>Solution</h3>
-<p>Simply parse the input, and sort the columns. Then, iterate through
-each row and find the total sum of the absolute difference of the
-numbers in the same row.</p>
+<ul>
+<li>If the row only has 1 number, it is safe trivially.</li>
+<li>Otherwise, we will establish whether the row is increasing or
+decreasing by examining the first 2 numbers of the row.</li>
+<li>Based on the established direction, we will then examine the rest of
+the numbers to determine if they fall within the acceptable range (1 to
+3).</li>
+<li>This can be implemented quite easily in Rust with a sliding window
+(<code>array.window(2)</code>).</li>
+</ul>
 </div>
 <div id="code-complexity" class="section level3">
 <h3>Code Complexity</h3>
 <p><strong>Time Complexity:</strong> <span class="math inline">\(O(N
-\log N)\)</span></p>
+\times M)\)</span></p>
 <ul>
-<li><span class="math inline">\(N\)</span> is the number of rows.</li>
+<li>N is the number of reports</li>
+<li>M is the number of levels</li>
 </ul>
-<p>Each column needs to be sorted.</p>
-<p><strong>Additional Space Complexity:</strong> <span class="math inline">\(O(N)\)</span></p>
-<p>Each column is copied out to a temporary vector before being
-sorted.</p>
-<p><strong>Final answer:</strong> 1666427.</p>
+<p>Trivially, each number is looked at only once.</p>
+<p><strong>Additional Space Complexity:</strong> <span class="math inline">\(O(1)\)</span></p>
+<p>A constant amount of extra space is used.</p>
+<p><strong>Final answer:</strong> 321.</p>
 </div>
 </div>
 <div id="part-b" class="section level2">
 <h2>Part B</h2>
 <div id="abridged-problem-statement-1" class="section level3">
 <h3>Abridged Problem Statement</h3>
-<p>You are given an input of <span class="math inline">\(n\)</span>
-rows. Each row has 2 numbers, <span class="math inline">\(a_i\)</span>
-and <span class="math inline">\(b_i\)</span>. Let <span class="math inline">\(A = \{a_0,a_1,\cdots,a_n\}\)</span> and <span class="math inline">\(B = \{b_0,b_1,\cdots,b_n\}\)</span>.</p>
-<p>Find <span class="math display">\[\sum_{a\in A} a \cdot
-\texttt{cnt($a$)},\]</span> where <span class="math inline">\(\texttt{cnt(\(x\))}\)</span> is the number of
-times <span class="math inline">\(x\)</span> appears in <span class="math inline">\(B\)</span>.</p>
+<p>You have <span class="math inline">\(Q\)</span> queries.</p>
+<p>Each query consists of a list of <span class="math inline">\(N\)</span> numbers. Each query is <em>safe</em> if
+it is either strictly decreasing or strictly increasing, and adjacent
+numbers differ by a value between 1 and 3 (inclusive), or if it has at
+most 1 number that can be removed to make the query safe.</p>
+<p>Count the number of <em>safe</em> queries.</p>
 </div>
 <div id="solution-1" class="section level3">
 <h3>Solution</h3>
-<p>Use a hashmap on <span class="math inline">\(B\)</span> to get the
-counts of each number. Then, iterate through <span class="math inline">\(A\)</span> and calculate the total sum based on
-the above formula accordingly.</p>
+<p>Firstly, note that anything less than 3 numbers will be trivially
+safe:</p>
+<ul>
+<li>1 number is trivially safe.</li>
+<li>If the difference of the 2 numbers fall outside the range, then we
+can simply remove one of the numbers.</li>
+</ul>
+<p>For 3 numbers, a check simply needs to be done to check if any of the
+2 numbers will form a valid sequences. This is 3 checks, and can be
+handled quite elegantly with a cyclic check.</p>
+<p>Otherwise, things will be slightly more complicated. We need to
+establish the <strong>trend</strong> of the numbers first:</p>
+<ul>
+<li>Note that our method for Day 2A will not work any more, since there
+is a possibility that the removal of <span class="math inline">\(a_i\)</span> will flip the direction of the
+sequence from that of the first 2 numbers.</li>
+</ul>
+<p>For example, 8 9 8 7 6, the removal of the first number will make the
+sequence decreasing instead and make the sequence valid. So, this
+possibility must be considered as well.</p>
+<ul>
+<li>Since we can only remove at most 1 number, looking at the first 4
+numbers is sufficient to make a decision on the direction of the
+sequence (with the majority of the elements winning).</li>
+</ul>
+<p>Consider <span class="math inline">\(a_0, a_1, a_2, a_3\)</span>.
+There will be 3 inequalities between them. If the inequalities are all
+the same, then a general trend has been set.</p>
+<p>Otherwise, we note that the number of inequalities will differ by at
+most 1 (either 2 are increasing, or 2 are decreasing). This leaves a
+single pair of numbers that violate the trend. We can then remove a
+single number to make the whole sequence of 3 numbers increasing or
+decreasing.</p>
+<p><strong>Therefore, we can establish the direction of the numbers by
+simply looking at the first 4 numbers.</strong></p>
+<p>We will then consider the case of <strong>unsafe</strong> number
+pairs, which is a pair of numbers <span class="math inline">\((a_i,
+a_{i+1})\)</span> that does not fulfil either the trend or bounds.</p>
+<p>For a pair of numbers <span class="math inline">\((a_i,
+a_{i+1})\)</span> that fails either condition above, we can simply test
+if the removal of the number will resolve it.</p>
+<ul>
+<li>Removing <span class="math inline">\(a_{i+1}\)</span> means that we
+would be determining if <span class="math inline">\((a_i,
+a_{i+2})\)</span> violate any conditions. However, if <span class="math inline">\(a_{i+1}\)</span> is the last number of the row,
+then it can simply be removed.</li>
+<li>Removing <span class="math inline">\(a_i\)</span> means that we
+would be determining if <span class="math inline">\((a_{i-1},a_{i+1})\)</span> violate any conditions.
+However, if <span class="math inline">\(a_i\)</span> is the first number
+of the row, then it can also simply be removed.</li>
+<li>If the removal of both numbers is still unable to resolve the
+violation, then it is impossible to resolve the violation for the
+row.</li>
+</ul>
+<p>We note that there can only be a maximum of one violation per row, so
+we need to track whenever a violation has been recorded, so the next
+violation will automatically result in the row being
+<em>unsafe</em>.</p>
 </div>
 <div id="code-complexity-1" class="section level3">
 <h3>Code Complexity</h3>
-<p><strong>Time Complexity:</strong> <span class="math inline">\(O(N)\)</span></p>
+<p><strong>Time Complexity:</strong> <span class="math inline">\(O(N
+\times M)\)</span></p>
 <ul>
-<li><span class="math inline">\(N\)</span> is the number of rows.</li>
+<li>N is the number of reports</li>
+<li>M is the number of levels</li>
 </ul>
-<p>Hashmaps have an average <span class="math inline">\(O(1)\)</span>
-insertion and read. Each number is iterated once.</p>
-<p><strong>Additional Space Complexity:</strong> <span class="math inline">\(O(N)\)</span></p>
-<p>At worst, the hashmap can take up to <span class="math inline">\(O(N)\)</span> space to store all the values in
-<span class="math inline">\(B\)</span>.</p>
-<p><strong>Final answer:</strong> 24316233.</p>
+<p>Each report is only iterated through once. Each level is only
+iterated through once, since we do a constant number of checks for each
+level.</p>
+<p><strong>Additional Space Complexity:</strong> <span class="math inline">\(O(1)\)</span></p>
+<p>Only a constant amount of extra space is used.</p>
+<p><strong>Final answer:</strong> 386.</p>
 <p>All code can be found at <a href="https://github.com/dillionlim/advent-of-code-2024/tree/main">my
 github repository</a>.</p>
 </div>
