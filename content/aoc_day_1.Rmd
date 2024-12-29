@@ -1,6 +1,6 @@
 ---
 title: Advent of Code 2024 Day 1
-date: 2024-04-21
+date: 2024-12-01
 tags: [Advent of Code, Rust]
 ---
 
@@ -65,3 +65,5 @@ Hashmaps have an average $O(1)$ insertion and read. Each number is iterated once
 At worst, the hashmap can take up to $O(N)$ space to store all the values in $B$.
 
 **Final answer:** 24316233.
+
+All code can be found at [my github repository](https://github.com/dillionlim/advent-of-code-2024/tree/main).
