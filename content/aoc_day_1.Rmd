@@ -36,7 +36,7 @@ Each column needs to be sorted.
 
 Each column is copied out to a temporary vector before being sorted. 
 
-**Final answer:** 1666427.
+**Final answer:** 1666427. 
 
 ## Part B
 
