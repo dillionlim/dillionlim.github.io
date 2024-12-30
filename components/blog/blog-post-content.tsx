@@ -32,16 +32,18 @@ export function BlogPostContent({ post, htmlContent }: { post: any; htmlContent:
       const mathElementsDisplay = document.querySelectorAll("span.math.display");
       mathElementsInline.forEach((el) => {
         try {
-          const mathContent = el.innerHTML.trim();
-          const cleanMath = mathContent.replace(/^\\\(/, '')
+          const mathContent = el?.textContent?.trim();
+          const cleanMath = mathContent?.replace(/^\\\(/, '')
           .replace(/\\\)$/, '')
           .replace(/^\\\[/, '') 
           .replace(/\\\]$/, '');
 
           const element = el as HTMLElement;
-          katex.render(cleanMath, element, {
-            throwOnError: false,
-          });
+          if (cleanMath) {
+            katex.render(cleanMath, element, {
+              throwOnError: false,
+            });
+          }
 
           element.style.zIndex = "1";
         } catch (error) {
@@ -50,17 +52,19 @@ export function BlogPostContent({ post, htmlContent }: { post: any; htmlContent:
       });
       mathElementsDisplay.forEach((el) => {
         try {
-          const mathContent = el.innerHTML.trim();
-          const cleanMath = mathContent.replace(/^\\\(/, '')
+          const mathContent = el?.textContent?.trim();
+          const cleanMath = mathContent?.replace(/^\\\(/, '')
           .replace(/\\\)$/, '')
           .replace(/^\\\[/, '') 
           .replace(/\\\]$/, '');
 
           const element = el as HTMLElement;
-          katex.render(cleanMath, element, {
-            throwOnError: false,
-            displayMode: true,
-          });
+          if (cleanMath) {
+            katex.render(cleanMath, element, {
+              throwOnError: false,
+              displayMode: true,
+            });
+          }
 
           element.style.zIndex = "1";
         } catch (error) {

@@ -100,7 +100,7 @@ export default function BlogPage() {
                                       <span key={tag}>
                                         <Link
                                           href={`/blog/tag/${encodeURIComponent(tag)}/1`}
-                                          className="hover:underline"
+                                          className="hover:underline hover:text-gray-500 dark:hover:text-gray-300 text-gray-500 text-gray-300"
                                         >
                                           {tag}
                                         </Link>
