@@ -33,6 +33,10 @@ jobs:
           Rscript -e 'install.packages(c("pdftools"))'
           Rscript -e 'install.packages(c("tinytex"))'
           Rscript -e 'tinytex::install_tinytex()'
+      
+      - name: Install dvisvgm
+        run: |
+          sudo tlmgr install dvisvgm
           
       - name: Convert Rmd to HTML
         run: |
