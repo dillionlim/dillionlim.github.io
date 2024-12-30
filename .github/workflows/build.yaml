@@ -28,21 +28,21 @@ jobs:
         
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("rmarkdown"))'
-          Rscript -e 'install.packages(c("magick"))'
-          Rscript -e 'install.packages(c("pdftools"))'
-          Rscript -e 'install.packages(c("tinytex"))'
-          Rscript -e 'tinytex::install_tinytex()'
+          sudo Rscript -e 'install.packages(c("rmarkdown"))'
+          sudo Rscript -e 'install.packages(c("magick"))'
+          sudo Rscript -e 'install.packages(c("pdftools"))'
+          sudo Rscript -e 'install.packages(c("tinytex"))'
+          sudo Rscript -e 'tinytex::install_tinytex()'
       
       - name: Install dvisvgm
         run: |
-          Rscript -e 'tinytex::tlmgr_install("dvisvgm", path = TRUE)'
+          sudo Rscript -e 'tinytex::tlmgr_install("dvisvgm", path = TRUE)'
           
       - name: Convert Rmd to HTML
         run: |
           for file in content/*.Rmd; do
             if [ -f "$file" ]; then
-              Rscript -e "rmarkdown::render('$file', output_format = 'html_fragment', output_dir = 'content', output_options = 'mathjax = TRUE')"
+              sudo Rscript -e "rmarkdown::render('$file', output_format = 'html_fragment', output_dir = 'content', output_options = 'mathjax = TRUE')"
             fi
           done
           
