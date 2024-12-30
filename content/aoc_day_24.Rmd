@@ -62,13 +62,13 @@ By analysing the general dependency graph, we notice that the addition process i
 
 This means that the circuit will be of the form:
 
-![](https://upload.wikimedia.org/wikipedia/commons/5/5d/4-bit_ripple_carry_adder.svg)
+![](rca.png)
 
 *Image taken from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/5/5d/4-bit_ripple_carry_adder.svg).*
 
 In particular, the full adder will be of the form:
 
-![](https://upload.wikimedia.org/wikipedia/commons/a/a9/Full-adder.svg)
+![](full-adder.png)
 
 *Image taken from [Wikipedia](https://en.m.wikipedia.org/wiki/File:Full-adder.svg).*
 
