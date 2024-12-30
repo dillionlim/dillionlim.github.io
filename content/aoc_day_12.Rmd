@@ -92,7 +92,29 @@ Therefore, counting the number of sides for this part simply boils down to count
 
 There are two kinds of corners, exterior corners (those that form a $270 \degree$ exterior angle) and interior corners (those that form a $90 \degree$ exterior angle).
 
-![corners](corners.png)
+
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 50px;">
+ <div>
+  <div style="display: grid; grid-template-columns: repeat(2, 50px); grid-template-rows: repeat(2, 50px); border: 1px solid black;">
+   <div style="width: 50px; height: 50px; background-color: white;"></div>
+   <div style="width: 50px; height: 50px; background-color: blue;"></div>
+   <div style="width: 50px; height: 50px; background-color: black;"></div>
+   <div style="width: 50px; height: 50px; background-color: white;"></div>
+  </div>
+  <div style="margin-top: 10px; font-size: 16px;">Exterior Corner</div>
+ </div>
+ <div>
+  <div style="display: grid; grid-template-columns: repeat(2, 50px); grid-template-rows: repeat(2, 50px); border: 1px solid black;">
+   <div style="width: 50px; height: 50px; background-color: black;"></div>
+   <div style="width: 50px; height: 50px; background-color: white;"></div>
+   <div style="width: 50px; height: 50px; background-color: black;"></div>
+   <div style="width: 50px; height: 50px; background-color: black;"></div>
+  </div>
+  <div style="margin-top: 10px; font-size: 16px;">Interior Corner</div>
+ </div>
+</div>
+<br/>
 
 Note that for the exterior corner, we simply need to check if the two orthogonal neighbours are both different from the current tile. Note that the blue tile does not matter, and it can be identical to the current tile.
 
