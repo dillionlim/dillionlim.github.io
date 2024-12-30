@@ -34,6 +34,11 @@ jobs:
           Rscript -e 'install.packages(c("tinytex"))'
           Rscript -e 'tinytex::install_tinytex()'
           Rscript -e 'tinytex:::install_prebuilt()'
+
+      - name: Install TeX Live for tlmgr
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full
       
       - name: Install dvisvgm
         run: |
