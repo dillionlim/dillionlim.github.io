@@ -43,6 +43,6 @@ For each pair of keys and locks, we can perform a check of their overlap in $O(1
 
 All keys and locks need to have their equivalent bit values stored in a vector.
 
-**Final answer:** 3327.
+**Final answer:** 3327. 
 
 All code can be found at [my github repository](https://github.com/dillionlim/advent-of-code-2024/tree/main).
