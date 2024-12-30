@@ -25,7 +25,7 @@ async function processRmdFiles() {
     const htmlPath = path.normalize(rmdPath.replace('.Rmd', '.html'));
     
     try {
-      execSync(`Rscript -e "rmarkdown::render('${rmdPath.replace(/\\/g, '\\\\')}', output_format = 'html_fragment', output_options = 'mathjax = FALSE')"`, {
+      execSync(`Rscript -e "rmarkdown::render('${rmdPath.replace(/\\/g, '\\\\')}', output_format = 'html_fragment')"`, {
         stdio: 'inherit'
       });
       
