@@ -36,7 +36,7 @@ jobs:
       
       - name: Install dvisvgm
         run: |
-          sudo Rscript -e 'tinytex::tlmgr_install("dvisvgm", path = TRUE)'
+          Rscript -e 'tinytex::tlmgr_install("dvisvgm", path = TRUE)'
           
       - name: Convert Rmd to HTML
         run: |
