@@ -31,6 +31,7 @@ jobs:
           Rscript -e 'install.packages(c("rmarkdown"))'
           Rscript -e 'install.packages(c("magick"))'
           Rscript -e 'install.packages(c("pdftools"))'
+          Rscript -e 'install.packages(c("tinytex"))'
           
       - name: Convert Rmd to HTML
         run: |
