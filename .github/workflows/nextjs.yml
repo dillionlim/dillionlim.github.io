@@ -5,12 +5,22 @@
 name: Deploy Next.js site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Trigger on push to main
   push:
-    branches: ["main"]
+    branches:
+      - main
+    paths-ignore:
+      - 'content/**.Rmd'
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Trigger manually
   workflow_dispatch:
+
+  # Trigger after the R Markdown Build workflow completes successfully
+  workflow_run:
+    workflows:
+      - R Markdown Build
+    types:
+      - completed
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
