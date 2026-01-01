@@ -1,0 +1,277 @@
+[
+  {
+    "id": "aoc_day_1",
+    "path": "/content/aoc_day_1.md",
+    "title": "Advent of Code 2024 Day 1",
+    "date": "2024-12-01",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Day 1: Historian Hysteria. Sorting lists and calculating distances."
+  },
+  {
+    "id": "aoc_day_10",
+    "path": "/content/aoc_day_10.md",
+    "title": "Advent of Code 2024 Day 10",
+    "date": "2024-12-10",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, we simply have a grid of numeric characters."
+  },
+  {
+    "id": "aoc_day_11",
+    "path": "/content/aoc_day_11.md",
+    "title": "Advent of Code 2024 Day 11",
+    "date": "2024-12-11",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, it appears that all numbers are positive unsigned integers that can fit in a 32-bit unsigned integer. "
+  },
+  {
+    "id": "aoc_day_12",
+    "path": "/content/aoc_day_12.md",
+    "title": "Advent of Code 2024 Day 12",
+    "date": "2024-12-12",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "It appears that the input is a grid of uppercase alphabetic characters."
+  },
+  {
+    "id": "aoc_day_13",
+    "path": "/content/aoc_day_13.md",
+    "title": "Advent of Code 2024 Day 13",
+    "date": "2024-12-13",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, it appears that all coordinates are positive integers."
+  },
+  {
+    "id": "aoc_day_14",
+    "path": "/content/aoc_day_14.md",
+    "title": "Advent of Code 2024 Day 14",
+    "date": "2024-12-14",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, all coordinates and velocities are signed 32-bit integers."
+  },
+  {
+    "id": "aoc_day_15",
+    "path": "/content/aoc_day_15.md",
+    "title": "Advent of Code 2024 Day 15",
+    "date": "2024-12-15",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, all the characters in the grid are either '#', '.', '@' or 'O'."
+  },
+  {
+    "id": "aoc_day_16",
+    "path": "/content/aoc_day_16.md",
+    "title": "Advent of Code 2024 Day 16",
+    "date": "2024-12-16",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, the input is simply a grid with 'S', 'E', '.' and '#' characters."
+  },
+  {
+    "id": "aoc_day_17",
+    "path": "/content/aoc_day_17.md",
+    "title": "Advent of Code 2024 Day 17",
+    "date": "2024-12-17",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, the input values all fit in a 32-bit unsigned integer."
+  },
+  {
+    "id": "aoc_day_18",
+    "path": "/content/aoc_day_18.md",
+    "title": "Advent of Code 2024 Day 18",
+    "date": "2024-12-18",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, all the numbers are within the range of 0 to 70."
+  },
+  {
+    "id": "aoc_day_19",
+    "path": "/content/aoc_day_19.md",
+    "title": "Advent of Code 2024 Day 19",
+    "date": "2024-12-19",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary input analysis, all characters are lowercase alphabets."
+  },
+  {
+    "id": "aoc_day_2",
+    "path": "/content/aoc_day_2.md",
+    "title": "Advent of Code 2024 Day 2",
+    "date": "2024-12-02",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, we know that the numbers are all unsigned 32-bit integers."
+  },
+  {
+    "id": "aoc_day_20",
+    "path": "/content/aoc_day_20.md",
+    "title": "Advent of Code 2024 Day 20",
+    "date": "2024-12-20",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, the input is a grid with '#', '.', 'S' and 'E' characters."
+  },
+  {
+    "id": "aoc_day_21",
+    "path": "/content/aoc_day_21.md",
+    "title": "Advent of Code 2024 Day 21",
+    "date": "2024-12-21",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, there are only 5 lines, each of which have 3 numeric characters followed by 'A'."
+  },
+  {
+    "id": "aoc_day_22",
+    "path": "/content/aoc_day_22.md",
+    "title": "Advent of Code 2024 Day 22",
+    "date": "2024-12-22",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, all the values are integers that fit in an unsigned 64-bit integer."
+  },
+  {
+    "id": "aoc_day_23",
+    "path": "/content/aoc_day_23.md",
+    "title": "Advent of Code 2024 Day 23",
+    "date": "2024-12-23",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, all the inputs are lowercase two-letter strings, separated by a `-`."
+  },
+  {
+    "id": "aoc_day_24",
+    "path": "/content/aoc_day_24.md",
+    "title": "Advent of Code 2024 Day 24",
+    "date": "2024-12-24",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, the first section contains three lowercase alphanumeric characters. The second number is either `0` or `1`."
+  },
+  {
+    "id": "aoc_day_25",
+    "path": "/content/aoc_day_25.md",
+    "title": "Advent of Code 2024 Day 25",
+    "date": "2024-12-25",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, all inputs are a 5 by 7 grid with either `#` or `.` characters."
+  },
+  {
+    "id": "aoc_day_3",
+    "path": "/content/aoc_day_3.md",
+    "title": "Advent of Code 2024 Day 3",
+    "date": "2024-12-03",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary inspection, the input is a multi-line string that contains **mul($a$,$b$)** in it. $a$ and $b$ appear to be unsigned 3 digit numbers,..."
+  },
+  {
+    "id": "aoc_day_4",
+    "path": "/content/aoc_day_4.md",
+    "title": "Advent of Code 2024 Day 4",
+    "date": "2024-12-04",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, the input is multiple lines of characters, containing 'X', 'M', 'A' and 'S'."
+  },
+  {
+    "id": "aoc_day_5",
+    "path": "/content/aoc_day_5.md",
+    "title": "Advent of Code 2024 Day 5",
+    "date": "2024-12-05",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, it appears that all the page numbers are unsigned 32-bit integers. Furthermore, the set of page numbers forms a direct..."
+  },
+  {
+    "id": "aoc_day_6",
+    "path": "/content/aoc_day_6.md",
+    "title": "Advent of Code 2024 Day 6",
+    "date": "2024-12-06",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, the guard will start in the `^` position. All other characters will be `.` or `#`. The movement of the guard is guaran..."
+  },
+  {
+    "id": "aoc_day_7",
+    "path": "/content/aoc_day_7.md",
+    "title": "Advent of Code 2024 Day 7",
+    "date": "2024-12-07",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, the target number is an unsigned 64-bit integer, and the rest of the numbers are unsigned 32-bit integers. More import..."
+  },
+  {
+    "id": "aoc_day_8",
+    "path": "/content/aoc_day_8.md",
+    "title": "Advent of Code 2024 Day 8",
+    "date": "2024-12-08",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "Based on preliminary data analysis, the grid contains either '.' or alphanumeric characters."
+  },
+  {
+    "id": "aoc_day_9",
+    "path": "/content/aoc_day_9.md",
+    "title": "Advent of Code 2024 Day 9",
+    "date": "2024-12-09",
+    "tags": [
+      "Advent of Code",
+      "Rust"
+    ],
+    "excerpt": "From preliminary data analysis, the input is simply a very long string with numeric characters, inclusive of 0."
+  }
+]
